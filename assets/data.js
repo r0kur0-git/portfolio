@@ -31,7 +31,7 @@ var PROJECTS = [
     video: "",
     image: "https://cdnb.artstation.com/p/assets/images/images/096/965/585/large/r0kur0-carti-retriever-album.webp?1772789564" },
   {
-    title: "game concepts", 
+    title: "Game Concepts", 
     description: "",
     medium: "",
     year: "", 
