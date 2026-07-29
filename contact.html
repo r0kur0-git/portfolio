@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Arif</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<style>
+:root{--paper:#EDE7DA;--paper2:#E3DCCC;--ink:#1C1B18;--teal:#2B6E62;--clay:#B8492F;--line:rgba(28,27,24,0.16);}
+*{box-sizing:border-box;}
+body{margin:0;background:repeating-linear-gradient(0deg, rgba(28,27,24,0.035) 0px, rgba(28,27,24,0.035) 1px, transparent 1px, transparent 64px),repeating-linear-gradient(90deg, rgba(28,27,24,0.035) 0px, rgba(28,27,24,0.035) 1px, transparent 1px, transparent 64px),var(--paper);color:var(--ink);font-family:'Work Sans',sans-serif;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;color:var(--teal);margin:0 0 14px;}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:26px 6vw;}
+.logo{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;}
+.logo .dot{color:var(--clay);}
+.links{display:flex;gap:28px;font-family:'JetBrains Mono',monospace;font-size:0.78rem;letter-spacing:0.05em;text-transform:uppercase;}
+.links a{opacity:0.65;border-bottom:1px solid transparent;padding-bottom:3px;transition:opacity .2s, border-color .2s;}
+.links a:hover, .links a.active{opacity:1;border-color:var(--clay);}
+.wrap{padding:40px 6vw 110px;max-width:640px;margin:0 auto;}
+.wrap h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.2rem,4.6vw,3.4rem);margin:0 0 18px;}
+.sub{font-size:1.02rem;color:#4a473f;line-height:1.6;max-width:44ch;margin:0 0 40px;}
+label{display:block;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;color:#5a564c;margin:0 0 6px;}
+input,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);background:rgba(255,255,255,0.3);font-family:'Work Sans',sans-serif;font-size:0.95rem;color:var(--ink);margin-bottom:20px;}
+textarea{resize:vertical;min-height:130px;}
+input:focus,textarea:focus{outline:2px solid var(--teal);outline-offset:1px;}
+.btn{font-family:'JetBrains Mono',monospace;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;padding:14px 26px;border:none;background:var(--ink);color:var(--paper);cursor:pointer;transition:background .2s;}
+.btn:hover{background:var(--teal);}
+#contact_ok{font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--teal);margin-top:18px;}
+#contact_err{font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--clay);margin-top:18px;}
+.hidden{display:none;}
+.foot{display:flex;justify-content:space-between;padding:28px 6vw 40px;font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:#8a8578;border-top:1px solid var(--line);}
+.foot-links a{margin-left:16px;opacity:0.8;}
+.foot-links a:hover{color:var(--clay);opacity:1;}
+@media(max-width:700px){.nav{flex-direction:column;gap:14px;text-align:center;}.foot{flex-direction:column;gap:10px;text-align:center;}.foot-links a{margin:0 8px;}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="logo">Arif<span class="dot">.</span></a>
+  <nav class="links">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<section class="wrap">
+  <p class="eyebrow">CONTACT</p>
+  <h1>Let's talk.</h1>
+  <p class="sub">Have a project in mind, or just want to say hi? Drop a note below.</p>
+
+  <form id="contactForm">
+    <label for="name">Name</label>
+    <input id="name" required>
+    <label for="email">Email</label>
+    <input id="email" type="email" required>
+    <label for="message">Message</label>
+    <textarea id="message" required></textarea>
+    <button class="btn" type="submit">Send message</button>
+  </form>
+  <p id="contact_ok" class="hidden">Thanks — your message is in. I'll get back to you soon.</p>
+  <p id="contact_err" class="hidden">Something went wrong — please try again.</p>
+</section>
+
+<footer class="foot">
+  <span>© 2026 Arif</span>
+  <span class="foot-links"><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></span>
+</footer>
+
+<script>
+(function(){
+  // ---- EmailJS config (same values as the AILA site's contact form) ----
+  var EMAILJS_SERVICE_ID = 'service_09uzf0c';
+  var EMAILJS_TEMPLATE_ID = 'template_levf9ol';
+  var EMAILJS_PUBLIC_KEY = 'uI-u4_ic_NkyHiR7U';
+
+  // To change who gets these emails, edit the two lines below and re-upload this file.
+  // (There's no admin panel in this static version, so this replaces that settings screen.)
+  var TO_EMAIL = 'arifaqmar10@gmail.com';
+  var CC_EMAIL = 'arifaqmar1011@gmail.com, theshadowmaster6@gmail.com';
+
+  var form = document.getElementById('contactForm');
+  var ok = document.getElementById('contact_ok');
+  var err = document.getElementById('contact_err');
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    ok.classList.add('hidden');
+    err.classList.add('hidden');
+    var nameVal = document.getElementById('name').value;
+    var emailVal = document.getElementById('email').value;
+    var messageVal = document.getElementById('message').value;
+
+    try{
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        to_email: TO_EMAIL,
+        cc_email: CC_EMAIL,
+        name: nameVal,
+        email: emailVal,
+        message: messageVal,
+        time: new Date().toLocaleString()
+      }, { publicKey: EMAILJS_PUBLIC_KEY });
+      form.reset();
+      ok.classList.remove('hidden');
+    }catch(ex){
+      err.classList.remove('hidden');
+    }
+  });
+})();
+</script>
+</body>
+</html>

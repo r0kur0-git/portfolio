@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Arif</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#EDE7DA;--paper2:#E3DCCC;--ink:#1C1B18;--teal:#2B6E62;--clay:#B8492F;--line:rgba(28,27,24,0.16);}
+*{box-sizing:border-box;}
+body{margin:0;background:repeating-linear-gradient(0deg, rgba(28,27,24,0.035) 0px, rgba(28,27,24,0.035) 1px, transparent 1px, transparent 64px),repeating-linear-gradient(90deg, rgba(28,27,24,0.035) 0px, rgba(28,27,24,0.035) 1px, transparent 1px, transparent 64px),var(--paper);color:var(--ink);font-family:'Work Sans',sans-serif;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;color:var(--teal);margin:0 0 14px;}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:26px 6vw;}
+.logo{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;}
+.logo .dot{color:var(--clay);}
+.links{display:flex;gap:28px;font-family:'JetBrains Mono',monospace;font-size:0.78rem;letter-spacing:0.05em;text-transform:uppercase;}
+.links a{opacity:0.65;border-bottom:1px solid transparent;padding-bottom:3px;transition:opacity .2s, border-color .2s;}
+.links a:hover, .links a.active{opacity:1;border-color:var(--clay);}
+.wrap{padding:40px 6vw 100px;max-width:1000px;margin:0 auto;}
+.wrap h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.2rem,4.6vw,3.4rem);margin:0 0 30px;}
+.lede{font-family:'Fraunces',serif;font-size:1.4rem;line-height:1.5;font-weight:400;max-width:38ch;margin:0 0 50px;}
+.tools{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:50px;}
+.tool{border:1px solid var(--line);padding:22px;background:rgba(255,255,255,0.18);}
+.tool p.mono{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;color:var(--teal);margin:0 0 8px;}
+.tool h3{font-family:'Fraunces',serif;font-size:1.2rem;margin:0 0 8px;}
+.tool p{font-size:0.92rem;color:#4a473f;line-height:1.5;margin:0;}
+.body-text{font-size:1.02rem;line-height:1.7;color:#3a3833;max-width:60ch;}
+.body-text p{margin:0 0 20px;}
+.cta-row{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap;}
+.btn{font-family:'JetBrains Mono',monospace;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;padding:14px 26px;display:inline-block;transition:transform .15s ease, background .2s ease;}
+.btn-solid{background:var(--ink);color:var(--paper);}
+.btn-solid:hover{transform:translateY(-2px);background:var(--teal);}
+.btn-line{border:1px solid var(--ink);}
+.btn-line:hover{transform:translateY(-2px);border-color:var(--clay);color:var(--clay);}
+.foot{display:flex;justify-content:space-between;padding:28px 6vw 40px;font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:#8a8578;border-top:1px solid var(--line);}
+.foot-links a{margin-left:16px;opacity:0.8;}
+.foot-links a:hover{color:var(--clay);opacity:1;}
+@media(max-width:700px){.tools{grid-template-columns:1fr;}.nav{flex-direction:column;gap:14px;text-align:center;}.foot{flex-direction:column;gap:10px;text-align:center;}.foot-links a{margin:0 8px;}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="logo">Arif<span class="dot">.</span></a>
+  <nav class="links">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="wrap">
+  <p class="eyebrow">ABOUT</p>
+  <h1>Hi, I'm Arif.</h1>
+  <p class="lede">I work in two dimensions and three — building scenes in Blender, then drawing over the edges of what a mesh can't say.</p>
+
+  <div class="tools">
+    <div class="tool">
+      <p class="mono">3D</p>
+      <h3>Blender</h3>
+      <p>Where most pieces start — blocking out form, light, and space before anything else gets decided.</p>
+    </div>
+    <div class="tool">
+      <p class="mono">ILLUSTRATION</p>
+      <h3>Huion tablet</h3>
+      <p>Where the render stops being enough — texture, line, and color pass by hand.</p>
+    </div>
+  </div>
+
+  <div class="body-text">
+    <p>Most of what's here started as a question I couldn't answer in one medium alone. A 3D block-out that needed a hand-drawn pass to feel finished, or a sketch that needed depth a flat page couldn't give it.</p>
+    <p>I'm always adding new work — check the projects page for the latest, or reach out if you want to talk about something in the works.</p>
+  </div>
+
+  <div class="cta-row">
+    <a href="work.html" class="btn btn-solid">See the work</a>
+    <a href="contact.html" class="btn btn-line">Get in touch</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <span>© 2026 Arif</span>
+  <span class="foot-links"><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></span>
+</footer>
+
+</body>
+</html>
