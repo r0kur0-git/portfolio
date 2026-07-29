@@ -50,8 +50,8 @@ var PROJECTS = [
 var LINKS = [
   { 
     label: "Artstation", 
-    url: "https://www.artstation.com/r0kur0" };
+    url: "https://www.artstation.com/r0kur0" },
   { 
     label: "Github", 
-    url: "https://github.com/r0kur0-git" };
+    url: "https://github.com/r0kur0-git" }
 ];
