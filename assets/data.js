@@ -13,39 +13,45 @@ var PROJECTS = [
   { 
     title: "Illustrations and Animated works", 
     description: "", 
-    medium: "", 
+    medium: "Illustrations", 
     year: "", 
     video: "", 
     image: "https://cdna.artstation.com/p/assets/images/images/091/252/090/large/r0kur0-carlotta-pixel.webp?1756273554" },
   { 
     title: "Vtuber Models", 
     description: "",
-    medium: "", 
+    medium: "Live2D Works", 
     year: "", 
     video: "", 
     image: "https://cdnb.artstation.com/p/assets/images/images/097/016/401/large/r0kur0-scene1-ezgif-com-optimize.jpg?1772964120" },
   {
     title: "Image Alteration",
     description: "",
-    medium: "", year: "",
+    medium: "Image Alterations", 
+    year: "",
     video: "",
     image: "https://cdnb.artstation.com/p/assets/images/images/096/965/585/large/r0kur0-carti-retriever-album.webp?1772789564" },
   {
     title: "Game Concepts", 
     description: "",
-    medium: "",
+    medium: "Game",
     year: "", 
     video: "", 
     image: "https://cdnb.artstation.com/p/assets/images/images/097/016/073/large/r0kur0-concept-game.webp?1772962515" },
   { 
     title: "Fodegraf",
     description: "",
-    medium: "", 
+    medium: "Fodegraf Works", 
     year: "", 
     video: "", 
     image: "https://cdnb.artstation.com/p/assets/images/images/100/299/339/large/r0kur0-screenshot-2026-05-18-101953.webp?1782458736" }
 ];
 
 var LINKS = [
-  { label: "link here", url: "https://www.test.com" }
+  { 
+    label: "Artstation", 
+    url: "https://www.artstation.com/r0kur0" };
+  { 
+    label: "Github", 
+    url: "https://github.com/r0kur0-git" };
 ];
