@@ -10,32 +10,48 @@
 // projects and links before you consider the site "live".
 
 var PROJECTS = [
+  { 
+    title: "Illustrations and Animated works", 
+    description: "", 
+    medium: "Illustrations", 
+    year: "", 
+    video: "", 
+    image: "https://cdna.artstation.com/p/assets/images/images/091/252/090/large/r0kur0-carlotta-pixel.webp?1756273554" },
+  { 
+    title: "Vtuber Models", 
+    description: "",
+    medium: "Live2D Works", 
+    year: "", 
+    video: "", 
+    image: "https://cdnb.artstation.com/p/assets/images/images/097/016/401/large/r0kur0-scene1-ezgif-com-optimize.jpg?1772964120" },
   {
-    title: "test",
-    description: "first upload",
-    medium: "3D · Blender",
+    title: "Image Alteration",
+    description: "",
+    medium: "Image Alterations", 
     year: "",
     video: "",
-    image: "https://rokuro.aila.my/assets/WAvpYYgRFxMLr7Lbcf85LRfPitJSu7b33Dj25T6E/ef6bb2ea-7f27-4ee0-8653-34831a824300.jpg"
-  },
+    image: "https://cdnb.artstation.com/p/assets/images/images/096/965/585/large/r0kur0-carti-retriever-album.webp?1772789564" },
   {
-    title: "aa",
-    description: "ss",
-    medium: "3D · Blender",
-    year: "",
-    video: "",
-    image: "https://rokuro.aila.my/assets/5N9ayZnvAhjCpejDLl3XemYDwqM5tf5f89I1Nccl/Flag_of_Malaysia,_vertical.jpg"
-  },
-  {
-    title: "dd",
-    description: "bb",
-    medium: "Illustration · Tablet",
-    year: "",
-    video: "",
-    image: "https://rokuro.aila.my/assets/7FboFSljqQPvOCrvGQNmI2Azp67Qajl8I2tdKQNp/cust%20port.jpg"
-  }
+    title: "Game Concepts", 
+    description: "",
+    medium: "Game",
+    year: "", 
+    video: "", 
+    image: "https://cdnb.artstation.com/p/assets/images/images/097/016/073/large/r0kur0-concept-game.webp?1772962515" },
+  { 
+    title: "Fodegraf",
+    description: "",
+    medium: "Fodegraf Works", 
+    year: "", 
+    video: "", 
+    image: "https://cdnb.artstation.com/p/assets/images/images/100/299/339/large/r0kur0-screenshot-2026-05-18-101953.webp?1782458736" }
 ];
 
 var LINKS = [
-  { label: "link here", url: "https://www.test.com" }
+  { 
+    label: "Artstation", 
+    url: "https://www.artstation.com/r0kur0" };
+  { 
+    label: "Github", 
+    url: "https://github.com/r0kur0-git" };
 ];
