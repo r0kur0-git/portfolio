@@ -16,7 +16,19 @@ var PROJECTS = [
     medium: "Illustrations",
     year: "",
     images: [
-      "https://cdna.artstation.com/p/assets/images/images/091/252/090/large/r0kur0-carlotta-pixel.webp?1756273554"
+      "https://cdna.artstation.com/p/assets/images/images/091/252/090/large/r0kur0-carlotta-pixel.webp?1756273554",
+      "https://cdnb.artstation.com/p/assets/images/images/091/252/093/medium/r0kur0-brs-2.webp?1756273560",
+      "https://cdnb.artstation.com/p/assets/images/images/091/252/103/medium/r0kur0-another-carlotta-1.webp?1756273571",
+      "https://cdnb.artstation.com/p/assets/images/images/091/252/109/medium/r0kur0-the-herta.webp?1756273581",
+      "https://cdna.artstation.com/p/assets/images/images/091/252/114/medium/r0kur0-ryuuko-9h30m.webp?1756273597",
+      "https://cdna.artstation.com/p/assets/images/images/091/252/116/medium/r0kur0-shorekeeper-pixel.webp?1756273604",
+      "https://cdna.artstation.com/p/assets/images/images/091/252/122/medium/r0kur0-phrolova-2.webp?1756273610",
+      "https://cdna.artstation.com/p/assets/images/images/091/252/130/medium/r0kur0-phrolova.webp?1756273620",
+      "https://cdna.artstation.com/p/assets/images/images/091/252/136/medium/r0kur0-monica.webp?1756273632",
+      "https://cdna.artstation.com/p/assets/images/images/091/252/138/medium/r0kur0-more-carlotta.webp?1756273643",
+      "https://cdnb.artstation.com/p/assets/images/images/091/252/139/medium/r0kur0-hatsune-miku-new.webp?1756273650",
+      "https://cdna.artstation.com/p/assets/images/images/091/252/142/medium/r0kur0-eden-portrait.webp?1756273656",
+      "https://cdna.artstation.com/p/assets/images/images/091/252/144/medium/r0kur0-chisa.webp?1756273664"
     ]
   },
   {
