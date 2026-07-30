@@ -1,6 +1,10 @@
-# Arif — Portfolio (static version)
+# Arif — Portfolio
 
-This is a static (no backend) version of the portfolio, built to run on GitHub Pages.
+## Site link
+
+```js
+  https://r0kur0-git.github.io/portfolio/index.html
+```
 
 ## Files
 
@@ -45,18 +49,6 @@ Open `contact.html`, find this block near the bottom, and edit the two values:
 var TO_EMAIL = 'arifaqmar10@gmail.com';
 var CC_EMAIL = 'arifaqmar1011@gmail.com, theshadowmaster6@gmail.com';
 ```
-
-## What's different from the AILA version
-
-- No `/admin` page — edit `assets/data.js` / `contact.html` directly instead.
-- No login system.
-- The contact form still emails you via EmailJS, but submissions are no
-  longer also saved to a database as a backup — check your email/spam
-  folder if you're not seeing a message you expect.
-- The project images currently in `assets/data.js` point to AILA's file
-  storage URLs. Those will keep working independently of whether your AILA
-  site is published, but consider downloading them and hosting them in an
-  `/images` folder in this repo so this site doesn't depend on AILA at all.
 
 ## Publishing on GitHub Pages
 
