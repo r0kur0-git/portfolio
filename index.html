@@ -42,8 +42,6 @@ a{color:inherit;text-decoration:none;}
 .btn-line:hover{transform:translateY(-2px);border-color:var(--clay);color:var(--clay);}
 .hero-art{color:var(--teal);display:flex;justify-content:center;}
 .wire{width:min(360px, 80%);}
-.spin{transform-origin:200px 200px;animation:spin 22s linear infinite;}
-@keyframes spin{from{transform:rotateY(0deg) rotate(0deg);}to{transform:rotateY(360deg) rotate(360deg);}}
 .strip{padding:60px 6vw 100px;max-width:1300px;margin:0 auto;}
 .strip-head h2{font-family:'Fraunces',serif;font-size:2rem;font-weight:600;margin:0;}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:38px;}
@@ -117,19 +115,8 @@ a{color:inherit;text-decoration:none;}
         <a href="contact.html" class="btn btn-line">Come and say Hi!</a>
       </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 400 400" class="wire">
-        <g class="spin">
-          <polygon points="200,40 340,120 340,280 200,360 60,280 60,120" fill="none" stroke="currentColor" stroke-width="1"/>
-          <polygon points="200,40 340,120 200,200 60,120" fill="none" stroke="currentColor" stroke-width="1"/>
-          <polygon points="60,120 200,200 200,360 60,280" fill="none" stroke="currentColor" stroke-width="1"/>
-          <polygon points="340,120 340,280 200,360 200,200" fill="none" stroke="currentColor" stroke-width="1"/>
-          <line x1="200" y1="40" x2="200" y2="200" stroke="currentColor" stroke-width="1"/>
-          <line x1="60" y1="120" x2="340" y2="120" stroke="currentColor" stroke-width="1"/>
-          <line x1="60" y1="280" x2="340" y2="280" stroke="currentColor" stroke-width="1"/>
-          <circle cx="200" cy="200" r="3" fill="currentColor"/>
-        </g>
-      </svg>
+    <div class="hero-art">
+      <img src="images/ryuuko smol.png" alt="Description of the image" style="width:100%; max-width:400px; height:auto; display:block; margin:0 auto;">
     </div>
   </section>
 
