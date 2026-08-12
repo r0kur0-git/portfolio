@@ -97,7 +97,7 @@ a{color:inherit;text-decoration:none;}
 <body>
 
 <header class="nav">
-  <a href="index.html" class="logo">Arif<span class="dot">.</span></a>
+  <a href="index.html" class="logo">Arif Aqmar<span class="dot">.</span></a>
   <nav class="links">
     <a href="index.html" class="active">Home</a>
     <a href="work.html">Work</a>
@@ -109,12 +109,12 @@ a{color:inherit;text-decoration:none;}
 <main>
   <section class="hero">
     <div class="hero-text">
-      <p class="eyebrow">PORTFOLIO — 3D &amp; DIGITAL ART</p>
-      <h1>Arif builds<br><em>form</em> from nothing.</h1>
-      <p class="sub">I move between two tools — Blender for sculpting scenes in three dimensions, and a drawing tablet for everything a mesh can't say. This is where both live.</p>
+      <p class="eyebrow">PORTFOLIO — ILLUSTRATIONS &amp; DIGITAL ART</p>
+      <h1>Imagination<br><em>is a form of</em> REALITY.</h1>
+      <p class="sub">Have something in mind?<br>Let me take care of it and make it into YOUR reality.</p>
       <div class="cta-row">
-        <a href="work.html" class="btn btn-solid">View the work</a>
-        <a href="contact.html" class="btn btn-line">Say hello</a>
+        <a href="work.html" class="btn btn-solid">My works</a>
+        <a href="contact.html" class="btn btn-line">Come and say Hi!</a>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -135,27 +135,15 @@ a{color:inherit;text-decoration:none;}
 
   <section class="strip">
     <div class="strip-head">
-      <p class="eyebrow">SELECTED WORK</p>
+      <p class="eyebrow">FEATURED WORK</p>
       <h2>Recent pieces</h2>
     </div>
     <div class="cards" id="cards"></div>
     <p class="strip-note" id="strip-note" style="display:none;">Projects will appear here once added to assets/data.js.</p>
   </section>
 
-  <section class="about-teaser">
-    <div class="teaser-text">
-      <p class="eyebrow">ABOUT</p>
-      <p class="teaser-body">I split my time between polygon and pencil — building scenes in Blender, then softening them with hand-drawn passes on a tablet. Most pieces start as one and finish as the other.</p>
-      <a href="about.html" class="link-arrow">More about me →</a>
-    </div>
-    <div class="teaser-annotation">
-      <p class="mono-tag">// currently exploring</p>
-      <p class="mono-line">procedural textures</p>
-    </div>
-  </section>
-
   <section class="links-section" id="linksSection">
-    <p class="eyebrow">ELSEWHERE</p>
+    <p class="eyebrow">LINKS</p>
     <div class="link-pills" id="linkPills"></div>
   </section>
 
@@ -190,16 +178,29 @@ a{color:inherit;text-decoration:none;}
     return (s || '').toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'') || 'uncategorized';
   }
 
+  function cover(p){
+    return p.images && p.images.length ? p.images[0] : null;
+  }
+
+  function buildStack(back, front){
+    return '<div class="stack">' +
+      '<div class="stack-layer back">' + (back ? '<img src="' + back + '" alt="">' : PLACEHOLDER) + '</div>' +
+      '<div class="stack-layer front">' + (front ? '<img src="' + front + '" alt="">' : PLACEHOLDER) + '</div>' +
+      '</div>';
+  }
+
   function thumbInner(items){
     if(items.length > 1){
-      var front = items[0], back = items[1];
-      return '<div class="stack">' +
-        '<div class="stack-layer back">' + (back.image ? '<img src="' + back.image + '" alt="">' : PLACEHOLDER) + '</div>' +
-        '<div class="stack-layer front">' + (front.image ? '<img src="' + front.image + '" alt="">' : PLACEHOLDER) + '</div>' +
-        '</div>';
+      // Folder grouping multiple projects under one medium — stack their covers.
+      return buildStack(cover(items[1]), cover(items[0]));
     }
-    var d = items[0];
-    return d.image ? '<img src="' + d.image + '" alt="">' : PLACEHOLDER;
+    var imgs = items[0].images || [];
+    if(imgs.length > 1){
+      // Single project whose own folder has more than one image — stack its own images.
+      return buildStack(imgs[1], imgs[0]);
+    }
+    var img = cover(items[0]);
+    return img ? '<img src="' + img + '" alt="">' : PLACEHOLDER;
   }
 
   function loadFeatured(){
